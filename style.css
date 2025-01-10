@@ -20,3 +20,24 @@ body{
     font-style: normal;
     font-size: 30px;
 }
+
+#result {
+    color: white;
+    font-family: "secret-service-typewriter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(175, 175, 175);
+    border: solid 3px white;
+    margin-top: 10px;
+}
+
+#greeting {
+    color: white;
+    text-align: center;
+    font-family: "secret-service-typewriter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+}

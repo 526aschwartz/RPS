@@ -10,8 +10,8 @@ userName ? document.getElementById('greeting').innerText=`Hello, ${userName}!`
 : document.getElementById('greeting').innerText='Hello stranger!'
 
 
-
-const getUserChoice = (userInput) => {
+// start of code
+const getUserPick = (userInput) => {
     userInput = userInput.toLowerCase();
     if (
       userInput === "rock" ||
@@ -25,7 +25,8 @@ const getUserChoice = (userInput) => {
     }
   };
   
-  const getComputerChoice = () => {
+  // computer
+  const getComputerPick = () => {
     const randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
       case 0:
@@ -37,46 +38,46 @@ const getUserChoice = (userInput) => {
     }
   };
   
-  const determineWinner = (userChoice, computerChoice) => {
-    if (userChoice === computerChoice) {
-      return 'This Game IS A Tie!';
+  // winner
+  const determineWinner = (userPick, computerPick) => {
+    if (userPick === computerPick) {
+      return 'No one wins. It\'s a tie';
     }
-    if (userChoice === 'rock') {
-      if (computerChoice === 'paper') {
-        return "Sorry, computer won!";
+    if (userPick === 'rock') {
+      if (computerPick === 'paper') {
+        return "Sorry, computer won! :(";
       } else {
         return "Congrats you won";
       }
     }
-    if (userChoice === 'paper') {
-      if (computerChoice === 'scissors') {
-        return "You Lose";
+    if (userPick === 'paper') {
+      if (computerPick === 'scissors') {
+        return "You Lose :(";
       } else {
         return "You won";
       }
     }
-    if (userChoice === 'scissors') {
-      if (computerChoice === 'rock') {
-        return "You Lose";
+    if (userPick === 'scissors') {
+      if (computerPick === 'rock') {
+        return "You Lose :(";
       } else {
+    
         return "You won";
       }
     }
   };
   
-  const playGame = (userChoice) => {
-    // Validate the user choice
-    const validUserChoice = getUserChoice(userChoice);
+  const playGame = (userPick) => {
   
-    // Get computer choice
-    const computerChoice = getComputerChoice();
+    //computer choice
+    const computerPick = getComputerPick();
   
     // Display user and computer choices
     const resultDiv = document.getElementById("result");
     resultDiv.innerHTML = `
-      <p>You chose: ${validUserChoice}</p>
-      <p>The computer chose: ${computerChoice}</p>
-      <p>${determineWinner(validUserChoice, computerChoice)}</p>
+      <p>You chose: ${userPick}</p>
+      <p>The computer chose: ${computerPick}</p>
+      <p>${determineWinner(userPick, computerPick)}</p>
     `;
   };
 
