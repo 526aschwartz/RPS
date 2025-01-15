@@ -31,9 +31,28 @@ body{
     background-color: rgb(175, 175, 175);
     border: solid 3px white;
     margin-top: 10px;
+    margin-right: 32px;
 }
 
 #greeting {
+    color: white;
+    text-align: center;
+    font-family: "secret-service-typewriter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+}
+
+#scoreboard {
+    color: white;
+    text-align: center;
+    font-family: "secret-service-typewriter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+}
+
+#resetBtn {
     color: white;
     text-align: center;
     font-family: "secret-service-typewriter", sans-serif;
