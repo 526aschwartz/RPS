@@ -118,10 +118,29 @@ const disableButtons = () => {
         checkGameOver();
   };
 
+  // reset the game
+const resetGame = () => {
+  // Reset scores
+  userScore = 0;
+  computerScore = 0;
+
+  // Enable buttons again
+  document.getElementById('rockBtn').disabled = false;
+  document.getElementById('paperBtn').disabled = false;
+  document.getElementById('scissorsBtn').disabled = false;
+
+  // Clear result message and scoreboard
+  document.getElementById('result').innerHTML = '';
+  updateScoreboard();
+  checkGameOver(); // This will check if the game is over (it shouldn't be after a reset)
+};
+
+
   // Event listeners for button clicks
   document.getElementById('rockBtn').addEventListener('click', () => playGame('rock'));
   document.getElementById('paperBtn').addEventListener('click', () => playGame('paper'));
   document.getElementById('scissorsBtn').addEventListener('click', () => playGame('scissors'));
+  document.getElementById('resetBtn').addEventListener('click', resetGame);
 
   // Initial scoreboard update
 updateScoreboard();
