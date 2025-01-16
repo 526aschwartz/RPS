@@ -132,7 +132,7 @@ const resetGame = () => {
   // Clear result message and scoreboard
   document.getElementById('result').innerHTML = '';
   updateScoreboard();
-  checkGameOver(); // This will check if the game is over (it shouldn't be after a reset)
+  checkGameOver(); 
 };
 
 
